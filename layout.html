@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sk">
+    <title>{{template "title"}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/prednasky/style.css">
+</html>
+<body>
+    <hint-wrapper>
+        <template shadowrootmode="open">
+            <slot></slot>
+            <section>
+                <h2 part="heading">Hinty</h2>
+                <slot name="hints"></slot>
+            </section>
+        </template>
+        <hgroup>
+            <h1>{{template "title"}}</h1>
+            <p>{{template "author"}}</p>
+            <p>{{template "place"}}</p>
+        </hgroup>
+        {{template "body"}}
+    </hint-wrapper>
+</body>

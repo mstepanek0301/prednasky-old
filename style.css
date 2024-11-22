@@ -1,0 +1,125 @@
+@import url('https://fonts.cdnfonts.com/css/latin-modern-roman');
+@import url('https://fonts.cdnfonts.com/css/latin-modern-math');
+
+:root {
+    display: flex;
+    justify-content: center;
+
+    font-family: LMRoman10, serif;
+}
+
+body {
+    max-width: 70ch;
+    margin: 1em;
+    margin-block: 2em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    counter-reset: problem hint;
+}
+
+math {
+    font-family: "Latin Modern Math", serif;
+}
+
+p {
+    hyphens: auto;
+    text-align: justify;
+
+    margin: 0;
+
+    &:not(:first-child) {
+        text-indent: 1.5em;
+    }
+}
+
+section {
+    clear: both;
+}
+
+.problem {
+    counter-increment: problem;
+
+    & > :first-child::before {
+        content: "Úloha " counter(problem) ".";
+        font-weight: bold;
+        margin-inline-end: 1ch;
+    }
+}
+
+.annotation {
+    &::before {
+        content: "("
+    }
+    &::after {
+        content: ")"
+    }
+}
+
+.source {
+    float: right;
+    margin-inline-start: 0.3em;
+    color: inherit;
+    text-decoration: none;
+
+    &::before {
+        content: "("
+    }
+    &::after {
+        content: ")"
+    }
+}
+
+hint-wrapper details {
+    counter-increment: hint;
+
+    summary {
+        font-weight: bold;
+        cursor: pointer;
+
+        &::before {
+            content: "Hint " counter(hint) ". ";
+        }
+    }
+}
+
+.nohint {
+    counter-increment: hint;
+}
+
+hint-wrapper {
+    display: contents;
+}
+
+hgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    text-wrap: balance;
+
+    margin-block: 1em;
+    margin-inline: 1em;
+
+    h1 {
+        font-size: 1.5em;
+        font-weight: normal;
+        margin: 0;
+        text-align: center;
+    }
+
+    p {
+        text-indent: 0 !important;
+        text-align: center;
+    }
+}
+
+h2, ::part(heading) {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+::part(heading) {
+    margin-block-end: 0.5em;
+}

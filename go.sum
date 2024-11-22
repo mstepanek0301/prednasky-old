@@ -1,0 +1,4 @@
+git.sr.ht/~mekyt/latex2mathml v0.0.0-20231214134936-808832af73fc h1:Yy9H2uH0njy/owOBGyTJ0f4zESzXh0uI/RNgiDO5sEg=
+git.sr.ht/~mekyt/latex2mathml v0.0.0-20231214134936-808832af73fc/go.mod h1:nqCw5t3X5/awtU/3GdvlDY7IZbDkiNLbcf/yvegFjyc=
+github.com/neruyzo/etree v0.0.0-20230816193247-70b7b06b18ad h1:IFwkE74VpR/tnfi4UCZUYK7+pMU0xIbEorgugpFypG0=
+github.com/neruyzo/etree v0.0.0-20230816193247-70b7b06b18ad/go.mod h1:7hUaAgCNhmIwcrIolKvs2StY/ho5G7bAGSdvaowcxqw=

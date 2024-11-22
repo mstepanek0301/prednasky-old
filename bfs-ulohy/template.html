@@ -1,0 +1,46 @@
+{{define "title"}}BFS úlohy{{end}}
+{{define "author"}}Martin Štěpánek{{end}}
+{{define "place"}}Jesenné sústredenie Prasku 2024, Tatranská Lomnica{{end}}
+{{define "body"}}
+    <section class="problem">
+        <p>Máš napísanú nejakú cestu bludiskom, ktoré vyzerá ako štvorcová sieť. V bludisku sa dá chodiť medzi políčkami len tak, ako ide táto cesta. Zisti, koľko krokov je v ceste <q>chybných</q>, teda takých, že by sa namiesto nich dal spraviť iný krok, ktorý by viedol bližšie k cieľu. <a class="source" href="https://www.ksp.sk/ulohy/zadania/2206/">KSP 39&ndash;2&ndash;1&ndash;5</a></p>
+    </section>
+    <details slot="hints"><summary></summary>
+        <p>Nájdi vzdialenosť každého vrcholu od cieľa.</p>
+    </details>
+
+    <section class="problem">
+        <p><span class="annotation">premena jednotiek</span> Zaujímalo ťa niekedy, koľko sekúnd trvá rok? To asi nevieš povedať priamo, ale vieš premieňať medzi nejakými inými jednotkami, tak by si to vedel(a) spočítať. Máš dané nejaké vzťahy medzi jednotkami (napr. {{math `1\,\text{h}=60\,\text{min}`}}) a hodnoty v nejakých jednotkách, ktoré chceš premeniť (napr. {{math `1\,\text{rok}=?\,\text{s}`}}). Spočítaj hodnoty v tých požadovaných jednotkách.</p>
+    </section>
+    <details slot="hints"><summary></summary>
+        <p>Nakresli si graf, kde vrcholy sú jednotky a hrany sú vzťahy medzi nimi.</p>
+    </details>
+
+    <section class="problem">
+        <p>Mesto si môžeme predstaviť ako mapu križovatiek a chodníkov medzi nimi. V meste je ale potopa a niektoré križovatky sú zaplavené. Chceš sa dostať zo školy domov, ale pri prechode zaplavenou križovatkou sa zamočíš. To ti až tak nevadí, ale nechceš prechladnúť, a tak chceš od zamočenia prejsť už najviac {{math `k`}} chodníkmi. Zisti, z ktorých križovatiek sa vieš dostať domov. <a class="source" href="https://oi.sk/archiv/2020/sl-2020-1-zad-A.pdf">OI A 36&ndash;DK&ndash;1</a></p>
+    </section>
+    <details slot="hints"><summary></summary>
+        <p>Predstav si prechádzku v opačnom poradí. Najprv z domu do zaplavenej križovatky a potom už len po suchých.</p>
+    </details>
+
+    <section class="problem">
+        <p>Máš daný graf s {{math `n`}} vrcholmi, štartový a cieľový vrchol. Chceš medzi nimi nájsť cestu párnej dĺžky, ktorá je navyše kratšia ako {{math `2n`}}. Nájdi takú cestu alebo zisti, že taká neexistuje. Hrany aj vrcholy v ceste sa môžu aj opakovať. <a class="source" href="https://www.ksp.sk/ulohy/zadania/2390/">KSP 40&ndash;1&ndash;2&ndash;5</a></p>
+    </section>
+    <details slot="hints"><summary></summary>
+        <p>Hint neni, dá sa to riešiť viacerými úplne rôznymi spôsobmi a je to príliš pekné, aby som ti to vyspoiloval.</p>
+    </details>
+
+    <section class="problem">
+        <p>Pre dané {{math `n`}} nájdi najmenšie také číslo, ktoré má ciferný súčet {{math `n`}} a je deliteľné {{math `n`}}. <a class="source" href="https://www.ksp.sk/ulohy/zadania/1825/">KSP 37&ndash;1&ndash;2&ndash;5</a></p>
+    </section>
+    <details slot="hints"><summary></summary>
+        <p>Postupne píš číslice a sleduj ciferný súčet aj zvyšok po delení {{math `n`}}.</p>
+    </details>
+
+    <section class="problem">
+        <p>Máš klávesnicu s písmenkami A&ndash;Z, backspaceom a tabom, ktorý robí autocomplete. Autocomplete funguje tak, že je daná nejaká množina slov (slovník), a keď ho stlačíš, tak sa aktuálne napísaný string {{math `s`}} doplní na lexikograficky najmenšie slovo v slovníku, ktoré začína na {{math `s`}}. Ďalej je daný zoznam stringov, ktoré chceš napísať, pre každý z nich zisti, na koľko najmenej stlačení klávesov to ide spraviť. <a class="source" href="https://www.ksp.sk/ulohy/zadania/1650/">KSP 36&ndash;1&ndash;2&ndash;6</a></p>
+    </section>
+    <details slot="hints"><summary></summary>
+        <p>Ulož si slovník ako písmenkový strom.</p>
+    </details>
+{{end}}

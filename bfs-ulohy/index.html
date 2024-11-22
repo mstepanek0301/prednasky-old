@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sk">
+    <title>BFS úlohy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/prednasky/style.css">
+</html>
+<body>
+    <hint-wrapper>
+        <template shadowrootmode="open">
+            <slot></slot>
+            <section>
+                <h2 part="heading">Hinty</h2>
+                <slot name="hints"></slot>
+            </section>
+        </template>
+        <hgroup>
+            <h1>BFS úlohy</h1>
+            <p>Martin Štěpánek</p>
+            <p>Jesenné sústredenie Prasku 2024, Tatranská Lomnica</p>
+        </hgroup>
+        
+    <section class="problem">
+        <p>Máš napísanú nejakú cestu bludiskom, ktoré vyzerá ako štvorcová sieť. V bludisku sa dá chodiť medzi políčkami len tak, ako ide táto cesta. Zisti, koľko krokov je v ceste <q>chybných</q>, teda takých, že by sa namiesto nich dal spraviť iný krok, ktorý by viedol bližšie k cieľu. <a class="source" href="https://www.ksp.sk/ulohy/zadania/2206/">KSP 39&ndash;2&ndash;1&ndash;5</a></p>
+    </section>
+    <details slot="hints"><summary></summary>
+        <p>Nájdi vzdialenosť každého vrcholu od cieľa.</p>
+    </details>
+
+    <section class="problem">
+        <p><span class="annotation">premena jednotiek</span> Zaujímalo ťa niekedy, koľko sekúnd trvá rok? To asi nevieš povedať priamo, ale vieš premieňať medzi nejakými inými jednotkami, tak by si to vedel(a) spočítať. Máš dané nejaké vzťahy medzi jednotkami (napr. <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>1</mn><mspace width="0.167em"/><mtext>h</mtext><mo>&#x0003D;</mo><mn>60</mn><mspace width="0.167em"/><mtext>min</mtext></mrow></math>) a hodnoty v nejakých jednotkách, ktoré chceš premeniť (napr. <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>1</mn><mspace width="0.167em"/><mtext>rok</mtext><mo>&#x0003D;</mo><mo>&#x0003F;</mo><mspace width="0.167em"/><mtext>s</mtext></mrow></math>). Spočítaj hodnoty v tých požadovaných jednotkách.</p>
+    </section>
+    <details slot="hints"><summary></summary>
+        <p>Nakresli si graf, kde vrcholy sú jednotky a hrany sú vzťahy medzi nimi.</p>
+    </details>
+
+    <section class="problem">
+        <p>Mesto si môžeme predstaviť ako mapu križovatiek a chodníkov medzi nimi. V meste je ale potopa a niektoré križovatky sú zaplavené. Chceš sa dostať zo školy domov, ale pri prechode zaplavenou križovatkou sa zamočíš. To ti až tak nevadí, ale nechceš prechladnúť, a tak chceš od zamočenia prejsť už najviac <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>k</mi></mrow></math> chodníkmi. Zisti, z ktorých križovatiek sa vieš dostať domov. <a class="source" href="https://oi.sk/archiv/2020/sl-2020-1-zad-A.pdf">OI A 36&ndash;DK&ndash;1</a></p>
+    </section>
+    <details slot="hints"><summary></summary>
+        <p>Predstav si prechádzku v opačnom poradí. Najprv z domu do zaplavenej križovatky a potom už len po suchých.</p>
+    </details>
+
+    <section class="problem">
+        <p>Máš daný graf s <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>n</mi></mrow></math> vrcholmi, štartový a cieľový vrchol. Chceš medzi nimi nájsť cestu párnej dĺžky, ktorá je navyše kratšia ako <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>2</mn><mi>n</mi></mrow></math>. Nájdi takú cestu alebo zisti, že taká neexistuje. Hrany aj vrcholy v ceste sa môžu aj opakovať. <a class="source" href="https://www.ksp.sk/ulohy/zadania/2390/">KSP 40&ndash;1&ndash;2&ndash;5</a></p>
+    </section>
+    <details slot="hints"><summary></summary>
+        <p>Hint neni, dá sa to riešiť viacerými úplne rôznymi spôsobmi a je to príliš pekné, aby som ti to vyspoiloval.</p>
+    </details>
+
+    <section class="problem">
+        <p>Pre dané <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>n</mi></mrow></math> nájdi najmenšie také číslo, ktoré má ciferný súčet <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>n</mi></mrow></math> a je deliteľné <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>n</mi></mrow></math>. <a class="source" href="https://www.ksp.sk/ulohy/zadania/1825/">KSP 37&ndash;1&ndash;2&ndash;5</a></p>
+    </section>
+    <details slot="hints"><summary></summary>
+        <p>Postupne píš číslice a sleduj ciferný súčet aj zvyšok po delení <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>n</mi></mrow></math>.</p>
+    </details>
+
+    <section class="problem">
+        <p>Máš klávesnicu s písmenkami A&ndash;Z, backspaceom a tabom, ktorý robí autocomplete. Autocomplete funguje tak, že je daná nejaká množina slov (slovník), a keď ho stlačíš, tak sa aktuálne napísaný string <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>s</mi></mrow></math> doplní na lexikograficky najmenšie slovo v slovníku, ktoré začína na <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>s</mi></mrow></math>. Ďalej je daný zoznam stringov, ktoré chceš napísať, pre každý z nich zisti, na koľko najmenej stlačení klávesov to ide spraviť. <a class="source" href="https://www.ksp.sk/ulohy/zadania/1650/">KSP 36&ndash;1&ndash;2&ndash;6</a></p>
+    </section>
+    <details slot="hints"><summary></summary>
+        <p>Ulož si slovník ako písmenkový strom.</p>
+    </details>
+
+    </hint-wrapper>
+</body>
