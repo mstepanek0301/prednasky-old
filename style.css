@@ -43,9 +43,8 @@ section {
     counter-increment: problem;
 
     & > :first-child::before {
-        content: "Úloha " counter(problem) ".";
+        content: "Úloha " counter(problem) ". ";
         font-weight: bold;
-        margin-inline-end: 1ch;
     }
 }
 
